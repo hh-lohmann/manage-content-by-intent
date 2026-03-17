@@ -127,14 +127,13 @@ Resolution scheme: author/s - audience - usage
   * usage: consult
 
 #### releases
-  * **! does not mean to contain only released content, but also contents supplementary for creating releases**
+  * **! does not mean only released content, but also contents supplementary for creating releases**
   * author: self
   * audience: others, self
   * usage: execute
 
 #### resources
-  * **! may not mean copies of resources, but rather links to resources**
-    * links instead of copies may appear everywhere, but here they may be the default
+  * **! does not mean primarily copies of resources, but content about resources**
   * author: others
   * audience: self
   * usage: apply, consult, execute
