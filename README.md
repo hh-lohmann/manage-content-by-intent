@@ -56,12 +56,14 @@ where the **possible answers** mean
 
 ### Overview
 
-* [concepts](#concepts)
-* [logs](#logs)
-* [memos](#memos)
-* [releases](#releases)
-* [resources](#resources)
-* [try-outs](#try-outs)
+| Category        | Generalized resolution         |
+| ----------------------- | ---------------------- |
+| [concepts](#concepts)   | self - X - apply       |
+| [logs](#logs)           | self - X - reconstruct |
+| [memos](#memos)         | self - X - consult     |
+| [releases](#releases)   | self - X - execute     |
+| [resources](#resources) | others - X - X         |
+| [try-outs](#try-outs)   | self - X - try-out     |
 
 
 ### Types and Tokens
@@ -69,43 +71,51 @@ where the **possible answers** mean
 Categories named with the plural form of their type name, e.g. "concepts", a single token of a category / type is named with the corresponding singular form, e.g. "concept".
 
 
+### Naming of categories
 
-### Heuristic resolution for appropriate category
+Category names are rather alluding than defining, mainly representing a semantic field of similar concepts.
+
+Actual categorization should not happen by category names, but by [operational categorization](#operational-categorization).
+
+
+### Operational categorization
 
 Resolution scheme: author/s - audience - usage
 
-* others - self - apply
-  * resources
+#### Explicit resolution paths
 
-* others - self - consult
-  * resources
+With similar paths (compare [Generalized paths](#generalized-resolution-paths)).
 
-* others - self - execute
-  * resources
 
-* self - others - apply
-  * concepts
+| Resolution path           | Category  |
+| ------------------------- | --------- |
+| others - self - apply     | resources |
+| others - self - consult   | resources |
+| others - self - execute   | resources |
+| self - others - apply     | concepts  |
+| self - others - consult   | memos     |
+| self - others - execute   | releases  |
+| self - self - apply       | concepts  |
+| self - self - consult     | memos     |
+| self - self - execute     | releases  |
+| self - self - reconstruct | logs      |
+| self - self - try-out     | try-outs  |
 
-* self - others - consult
-  * memos
 
-* self - others - execute
-  * releases
+#### Generalized resolution paths
 
-* self - self - apply
-  * concepts
+Collapsing similar paths with `X` for non-distinguishing part (compare [Full paths](#explicit-resolution-paths)).
 
-* self - self - consult
-  * memos
 
-* self - self - execute
-  * releases
+| Resolution path        | Category  |
+| ---------------------- | --------- |
+| others - X - X         | resources |
+| self - X - apply       | concepts  |
+| self - X - consult     | memos     |
+| self - X - execute     | releases  |
+| self - X - reconstruct | logs      |
+| self - X - try-out     | try-outs  |
 
-* self - self - reconstruct
-  * logs
-
-* self - self - try-out
-  * try-outs
 
 
 
@@ -134,6 +144,7 @@ Resolution scheme: author/s - audience - usage
 
 #### resources
   * **! does not mean primarily copies of resources, but content about resources**
+  * **special category: mainly references to be used by contents in other categories**
   * author: others
   * audience: self
   * usage: apply, consult, execute
