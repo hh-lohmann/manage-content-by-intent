@@ -14,7 +14,7 @@ Categoration becomes less helpful with too many possible categories.
 The following tries to categorize by the intent for using a respective content, namely: who authors the content for which audience to do what.
 
 
-## Concepts
+## Considerations
 
 ### Manageable number of categorizing directories
 
