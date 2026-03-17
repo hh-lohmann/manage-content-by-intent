@@ -1,0 +1,10 @@
+{
+  "name": "manage-content-by-intent",
+  "description": "Restricted set for categories of intent to manage contents to work with.",
+  "intent": "concept",
+  "version": "1.0.0",
+  "author": {
+    "name": "hh.skladby",
+    "email": "hh.skladby@gmail.com"
+  }
+}
