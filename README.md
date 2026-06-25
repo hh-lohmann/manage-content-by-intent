@@ -141,6 +141,7 @@ Collapsing similar paths with `X` for non-distinguishing part (compare [Full pat
   * author: self
   * audience: others, self
   * usage: execute
+  * **Key for [package.json](#use-with-packagejson) and [README.md](#use-with-readmemd) to be set as the purpose of the release, e.g. "npm package", "PHP routine"**
 
 #### resources
   * **! does not mean primarily copies of resources, but content about resources**
@@ -157,9 +158,9 @@ Collapsing similar paths with `X` for non-distinguishing part (compare [Full pat
 
 ## Use with package.json
 
-A content stored in a file system should inform about itself by a `package.json`, even if it is not a Node / npm package.
+A content stored in a file system should inform about itself by a `package.json`, especially [if it is not an executable Node / npm package](#hh-lohmann-using-packagejson-without-javascript-exports).
 
-A key `intent` should give a [token name](#types-and-tokens) depicting a [category (type)](#overview), e.g.
+If a [release](#releases) is not an executable npm package, a package.json key `intent` should give a [token name](#types-and-tokens) depicting a [category (type)](#overview), e.g.
 
 ```json
   {
@@ -168,6 +169,26 @@ A key `intent` should give a [token name](#types-and-tokens) depicting a [catego
     "intent": "concept"
   }
 ```
+
+For executable npm packages the intent must not be stated explicitly since it is intrinsic.
+
+
+## Use with README.md
+
+Good development and presentation utilizes a [README file](#wikipedia-readme-files) as an entry point or introduction or delivering content itself, in modern web context formatted with human readable Markdown as README.md.
+
+Using a project's / content's intent as a category header improves quick acquaintance of what things are about. To mark it as a kind of heading, but a meta information that is not a part of the actual content, it should be formatted as a heading outside of the regular heading hierarchy by using the lowest possible heading level to be followed by the README's title formatted as the top level heading:
+
+```
+  ###### ...intent...
+
+  # ...title...
+
+  ...
+```
+
+For executable npm packages the intent must not be stated explicitly in the README.md that is published to the npm registry, but should be kept in a version provided as a GitHub repo and / or on GitHub Pages.
+
 
 
 ## Use for root level directories
@@ -183,3 +204,16 @@ The [described set of categories](#overview) qualify directly for equivalently n
     * no parent level itself expresses one of the categories used here
   
 A typical example for a root level in the sense here is a user / home directory.
+
+
+## References
+
+### hh lohmann: Using package.json without JavaScript exports
+  * <https://hh-lohmann.github.io/package-json-no-js/>
+
+### Wikipedia: README files
+  * <https://en.wikipedia.org/wiki/README>
+
+
+<!-- see https://hh-lohmann.github.io/html-endspacer -->
+<p id="endspacer" data-version="0.2.0" title="Endspacer - helps to align scrolling and positioning link targets | Scroll up to content or click / touch to jump to page top" align="center"><a href="#top"><img alt="Endspacer: './markdown-assets/endspacer.png' missing - see https://hh-lohmann.github.io/html-endspacer" src="./markdown-assets/endspacer.png" height="1000" width="100%"><br>[top]</a></p>
